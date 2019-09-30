@@ -13,6 +13,12 @@ public class CalculateUtil {
      * @return
      */
     public static StringBuffer getCharValByStr(String... v){
+        if(v.length == 0){
+            return new StringBuffer("0");
+        }
+        if(v.length == 1){
+            return new StringBuffer(v[0]);
+        }
         char[][] chars = new char[v.length][];
         int[] index = new int[v.length];
         for(int i = 0; i < v.length; i++){
